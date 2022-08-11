@@ -1,33 +1,21 @@
 <?php
 require 'vendor/autoload.php';
 require 'includes/view.php';
-
 ?>
-<html lang="ko">
+<html>
 <head>
     <meta charset="UTF-8">
     <title>Dashboard</title>
 
-    <script src='http://code.jquery.com/jquery-latest.js'></script>
-
-<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-
+    <link  href="js/viewer.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 
-
-    <link  href="js/viewer.min.css" rel="stylesheet">
-
-
+    <script src='http://code.jquery.com/jquery-latest.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 </head>
 <body>
 
@@ -103,13 +91,6 @@ require 'includes/view.php';
                 <form class="form-inline">
                     <div class="dropdown">
                         <a href="#" class="text-white dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My profile <span class="caret"></span></a>
-                        <!--                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">>-->
-                        <!--                        <li><a href="#"><i class="fa fa-user-o fw"></i> My account</a></li>-->
-                        <!--                        <li><a href="#"><i class="fa fa-envelope-o fw"></i> My inbox</a></li>-->
-                        <!--                        <li><a href="#"><i class="fa fa-question-circle-o fw"></i> Help</a></li>-->
-                        <!--                        <li role="separator" class="divider"></li>-->
-                        <!--                        <li><a href="#"><i class="fa fa-sign-out"></i> Log out</a></li>-->
-                        <!--                    </ul>-->
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="#">Action</a>
                             <a class="dropdown-item" href="#">Another action</a>
@@ -129,9 +110,7 @@ require 'includes/view.php';
             use Symfony\Component\Finder\Finder;
 
             $finder = new Finder();
-
             $finder->in("img\"");
-
             //$finder->in('c:\\wamp64\www');
 
             foreach ($finder as $file) {
@@ -140,17 +119,16 @@ require 'includes/view.php';
                 $fileNameWithExtension = $file->getRelativePathname();
                 b4_box("img/".$file->getRelativePathname());
             }
+
             ?>
         </div>
         <script>
-            // alert(all.length);
             $(function(){
                 let $container = $('#container');
 
                 // var reMasonry = function() {
                 //     $container.masonry();
                 // };
-
 
                 $container.masonry({
                     isFitWidth: true,

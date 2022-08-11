@@ -145,7 +145,7 @@ function b4_carousel() {
 <?php
 function b4_list() {
     ?>
-    <div class="grid-item" style="width: 20%;">
+    <div class="grid-item" style="width: 200px;">
         <ul class="list-group">
             <li class="list-group-item">Cras justo odio</li>
             <li class="list-group-item">Dapibus ac facilisis in</li>
