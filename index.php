@@ -14,9 +14,10 @@ require 'includes/view.php';
     <link href="js/viewer.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 
-    <script src='http://code.jquery.com/jquery-latest.js'></script>
+    <script src='https://code.jquery.com/jquery-latest.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 </head>
 
 <body>
@@ -114,8 +115,10 @@ require 'includes/view.php';
             <?php
             use Symfony\Component\Finder\Finder;
 
+            b4_chart();
+            b4_list();
             $finder = new Finder();
-            $finder->in("img\"");
+            $finder->in("img");
             //$finder->in('c:\\wamp64\www');
 
             foreach ($finder as $file) {
@@ -123,8 +126,9 @@ require 'includes/view.php';
                 $absoluteFilePath = $file->getRealPath();
                 $fileNameWithExtension = $file->getRelativePathname();
                 b4_box("img/".$file->getRelativePathname());
+               
             }
-
+         
             ?>
         </div>
         <script>
