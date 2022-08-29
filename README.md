@@ -1,5 +1,5 @@
 # 
-![alt text?](https://github.com/gemilepus/NavbarWithCard/blob/master/cover.png)
+![alt text?](cover.png)
 
 ### Installation ###
 
